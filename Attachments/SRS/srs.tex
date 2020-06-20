@@ -1,0 +1,123 @@
+\documentclass[openany, oneside,11pt]{book}
+\usepackage[
+  top=0.65in,
+  bottom=0.25in,
+  left=1.25in,
+  right=1.25in,
+  bindingoffset=0.25in,
+  heightrounded
+]{geometry}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{fancyhdr}
+\pagestyle{plain}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\fancyhf{}
+\fancyhead[RE]{\chaptername~\thechapter}
+\fancyhead[LO]{\leftmark}
+\fancyhead[HR]{B-Track SRS}
+\rfoot{Page \thepage}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Software Requirement Specification},    % title
+    pdfauthor={Albert Negura},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+\addto\captionsenglish{\renewcommand{\chaptername}{Section}}
+\usepackage{hyperref}
+\begin{document}
+\thispagestyle{empty}
+\begin{flushright}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{SOFTWARE REQUIREMENTS\\ SPECIFICATION}\\
+        \vspace{1.5cm}
+        for\\
+        \vspace{1.5cm}
+        B-Track\\
+        \vspace{1.5cm}
+        \LARGE{Version \myversion}\\
+        \vspace{1.5cm}
+        Prepared by Albert Negura\\
+        \vspace{1.5cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
+\clearpage
+\setcounter{page}{1}
+\tableofcontents
+\thispagestyle{fancy}
+\chapter{Document Overview}
+\thispagestyle{fancy}
+This document outlines the SRS including the complete project specifications, requirements, complete database specifications and development plan for B-Track, a Bug Tracker or Issue Tracker or Ticket system web app developed in $C\#$, employing the $.NET$ framework, $MVC$ pattern and $SQL$ Server Database technology. This document was written and compiled in LaTeX.
+\newline
+\newline
+Section 2 provides an overview of the project, the indended stakeholders and the assumptions and constraints used in the development of this project in a way meant to mirror the method applied by various corporations for similar software development projects.
+\newline
+\newline
+Section 3 provides a list, description and purpose for all the functional and non-functional requirements relating the end user requirements, user interface, performance, security and software quality.
+\newline
+\newline
+Section 4 provides a complete classification and ranking of all the functional requirements while also providing the dependencies for each of the functional requirements.
+\newline
+\newline
+Section 5 provides the corresponding Database design, basic UI design and UML design, together with other explanatory diagrams.
+\newline
+\newline
+The necessary planning and other helpful material not directly corresponding to the software requirements specifications will be featured in the Appendix.
+\newline
+\newline
+
+\chapter{Project Overview}
+\thispagestyle{fancy}
+\section{Project Introduction}
+B-Track is a Bug Tracker, Issue Tracker or Ticket system meant to mirror the functionality of similar modern day system used by various corporations throughout the world. Such a system is used to maintain accurate records of development processes on a per-project basis or to help with customer or client tech support depending on the desired use case. 
+\section{Stakeholders}
+This project does not have any direct clients and was created with the goal to act as a suitable programming exercise and example of good software development practices.
+\section{Assumptions and Constraints}
+This project is meant to act as a Web-based service application developed using the JetBrains Rider 2020 IDE Professional edition and the JetBrains DataGrip 2020 database IDE, available through the JetBrains student package. It also employs the Model-View Controller design pattern at its core. The web pages are to be built with HTML5 and Bootstrap. The page should be hosted online using AWS, with the link being provided on GitHub.
+
+\chapter{Requirements}
+\thispagestyle{fancy}
+This section describes all the functional and non-functional requirements and / or features for the Bug Tracking software. The project will only be considered complete upon having all the requirements outlined in this section met.
+\section{Functional Requirements}
+\subsection{End User Requirements}
+End users must be able to perform the following actions:
+\input{EndUserRequirements}
+\subsection{User Interface Requirements}
+
+\section{Non-functional Requirements}
+\subsection{Performance Requirements}
+\subsection{Security Requirements}
+\subsection{Software Quality Attributes}
+
+\chapter{Classification of Functional Requirements}
+\section{End User Requirements}
+\section{User Interface Requirements}
+
+\chapter{Developer Add-ons}
+\section{Database Design}
+\section{User Interface Design}
+\section{UML Design}
+
+\appendix
+\end{document}
