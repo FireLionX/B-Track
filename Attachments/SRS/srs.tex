@@ -10,10 +10,13 @@
 \usepackage{listings}
 \usepackage{underscore}
 \usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
 \usepackage{fancyhdr}
 \usepackage[bookmarks=true]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{multirow}
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
 \usepackage{fancyhdr}
@@ -23,7 +26,7 @@
 \fancyhead[RE]{\chaptername~\thechapter}
 \fancyhead[LO]{\leftmark}
 \fancyhead[HR]{B-Track SRS}
-\rfoot{Page \thepage}
+\fancyhead[CH]{Page \thepage}
 \hypersetup{
     bookmarks=false,    % show bookmarks bar?
     pdftitle={Software Requirement Specification},    % title
@@ -63,9 +66,8 @@
     \end{bfseries}
 \end{flushright}
 \clearpage
-\setcounter{page}{1}
 \tableofcontents
-\thispagestyle{fancy}
+\setcounter{page}{0}
 \chapter{Document Overview}
 \thispagestyle{fancy}
 This document outlines the SRS including the complete project specifications, requirements, complete database specifications and development plan for B-Track, a Bug Tracker or Issue Tracker or Ticket system web app developed in $C\#$, employing the $.NET$ framework, $MVC$ pattern and $SQL$ Server Database technology. This document was written and compiled in LaTeX.
@@ -87,33 +89,45 @@ The necessary planning and other helpful material not directly corresponding to 
 \newline
 \newline
 
+
 \chapter{Project Overview}
 \thispagestyle{fancy}
+
 \section{Project Introduction}
 B-Track is a Bug Tracker, Issue Tracker or Ticket system meant to mirror the functionality of similar modern day system used by various corporations throughout the world. Such a system is used to maintain accurate records of development processes on a per-project basis or to help with customer or client tech support depending on the desired use case. 
 \section{Stakeholders}
+
 This project does not have any direct clients and was created with the goal to act as a suitable programming exercise and example of good software development practices.
 \section{Assumptions and Constraints}
+
 This project is meant to act as a Web-based service application developed using the JetBrains Rider 2020 IDE Professional edition and the JetBrains DataGrip 2020 database IDE, available through the JetBrains student package. It also employs the Model-View Controller design pattern at its core. The web pages are to be built with HTML5 and Bootstrap. The page should be hosted online using AWS, with the link being provided on GitHub.
+
 
 \chapter{Requirements}
 \thispagestyle{fancy}
 This section describes all the functional and non-functional requirements and / or features for the Bug Tracking software. The project will only be considered complete upon having all the requirements outlined in this section met.
+
 \section{Functional Requirements}
 \subsection{End User Requirements}
 End users must be able to perform the following actions:
 \input{EndUserRequirements}
+\thispagestyle{fancy}
 \subsection{User Interface Requirements}
-
+To facilitate intuitive and user-friendly interaction, the user interface must be designed according to the following requirements:
+\input{UserInterfaceRequirements}
+\thispagestyle{fancy}
 \section{Non-functional Requirements}
+
 \subsection{Performance Requirements}
 \subsection{Security Requirements}
 \subsection{Software Quality Attributes}
 
+\thispagestyle{fancy}
 \chapter{Classification of Functional Requirements}
 \section{End User Requirements}
 \section{User Interface Requirements}
 
+\thispagestyle{fancy}
 \chapter{Developer Add-ons}
 \section{Database Design}
 \section{User Interface Design}
